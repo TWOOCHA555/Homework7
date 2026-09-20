@@ -15,7 +15,6 @@ public class Main {
         int fullDistance = 42195;
         int distanceCovered = 0;
         System.out.println("Дистанция: " + fullDistance + " метров");
-
         do {
             int remainingDistance = fullDistance - distanceCovered;
             System.out.println("Держитесь! Осталось " + remainingDistance + " метров");
@@ -49,6 +48,24 @@ public class Main {
             System.out.println("День " + (currentDay - 1) + ": списано " + dailyRate + "₽. Осталось: " + budget + "₽");
         }
         System.out.println("Итого: автомобиль можно оставить на " + (currentDay - 2) + " дней");
+        System.out.println("____________");
+        System.out.println("Задача 3, цикл for");
+        int funds = 900;
+        int parkingFee = 100;
+        System.out.println("Бюджет: " + funds + "₽");
+        System.out.println("Стоимость парковки: " + parkingFee + "₽/день (каждый 5‑й день — бесплатно)");
+        for (int dayNumber = 1; funds >= 0; dayNumber++) {
+            if (dayNumber % 5 == 0) {
+                System.out.println("День " + dayNumber + ": оплата не взимается (каждый 5‑й день — бесплатно)");
+                continue;
+            }
+            if (funds < parkingFee) {
+                break;
+            }
+            funds -= parkingFee;
+            System.out.println("День " + dayNumber + ": списано " + parkingFee + "₽. Осталось: " + funds + "₽");
+            System.out.println("Итого: автомобиль можно оставить на " + (dayNumber) + " дней");
+        }
         System.out.println("____________");
         System.out.println("Задача 4:");
         int month = 0;
