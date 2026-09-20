@@ -81,6 +81,7 @@ public class Main {
                 break;
             }
         }
+
         System.out.println("Цель достигнута за " + month + " месяцев.");
         System.out.println("____________");
         System.out.println("Задача 5:");
