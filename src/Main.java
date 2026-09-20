@@ -64,8 +64,8 @@ public class Main {
             }
             funds -= parkingFee;
             System.out.println("День " + dayNumber + ": списано " + parkingFee + "₽. Осталось: " + funds + "₽");
+            System.out.println("Итого: автомобиль можно оставить на " + (dayNumber) + " дней");
         }
-        System.out.println("Итого: автомобиль можно оставить на " + (currentDay - 2) + " дней");
         System.out.println("____________");
         System.out.println("Задача 4:");
         int month = 0;
@@ -81,6 +81,7 @@ public class Main {
                 break;
             }
         }
+
         System.out.println("Цель достигнута за " + month + " месяцев.");
         System.out.println("____________");
         System.out.println("Задача 5:");
